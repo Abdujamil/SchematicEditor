@@ -1,3 +1,4 @@
+// import MainStage from 'CanvasPages/MainStage';
 import MiniDrawer from './Drawer';
 // import ConvasStars from './ConvasStars';
 
