@@ -1,7 +1,10 @@
+import MiniDrawer from './Drawer';
+// import ConvasStars from './ConvasStars';
+
 export default function Scheme() {
   return (
     <div>
-      <h1>SchemeHome work</h1>
+      <MiniDrawer />
     </div>
   );
 }

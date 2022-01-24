@@ -231,8 +231,10 @@
     "electron-log": "^4.4.1",
     "electron-updater": "^4.3.9",
     "history": "4.x.x",
+    "konva": "^8.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-konva": "^17.0.2-5",
     "react-router-dom": "^6.2.1",
     "regenerator-runtime": "^0.13.9",
     "styled-components": "^5.3.3"

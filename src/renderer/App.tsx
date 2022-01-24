@@ -2,12 +2,11 @@ import './App.global.css';
 import Scheme from 'Components/HomeScheme/Scheme';
 import { Routes, Route } from 'react-router-dom';
 import Home from 'Components/Home/Home';
-import Header from 'Components/Header/header';
+// import Header from 'Components/Header/header';
 
 export default function App() {
   return (
     <>
-      <Header />
       <div>
         <Routes>
           <Route path="/home" element={<Home />} />
