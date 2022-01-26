@@ -227,17 +227,20 @@
     "@mui/icons-material": "^5.2.5",
     "@mui/material": "^5.2.8",
     "@mui/styled-engine-sc": "^5.1.0",
+    "axios": "^0.25.0",
     "electron-debug": "^3.2.0",
     "electron-log": "^4.4.1",
     "electron-updater": "^4.3.9",
     "history": "4.x.x",
     "konva": "^8.3.2",
+    "node-fetch": "^3.2.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-konva": "^17.0.2-5",
     "react-router-dom": "^6.2.1",
     "regenerator-runtime": "^0.13.9",
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "use-http": "^1.0.26"
   },
   "devEngines": {
     "node": ">=14.x",

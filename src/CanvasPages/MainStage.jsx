@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { Stage, Layer } from 'react-konva';
 import Section from './Section';
 import SeatPopup from './SeatPopup';
 
+import { AutoFixOffSharp } from '@mui/icons-material';
 import * as layout from './layout';
 
 const useFetch = (url) => {
@@ -16,7 +17,7 @@ const useFetch = (url) => {
 };
 
 const MainStage = (props) => {
-  const jsonData = useFetch('../../public/seats-data.json');
+  const jsonData = useFetch('./seats-data.json');
   const containerRef = useRef(null);
   const stageRef = useRef(null);
 
@@ -71,7 +72,7 @@ const MainStage = (props) => {
 
   const handleHover = useCallback((seat, pos) => {
     setPopup({
-      seat: seat,
+      seat,
       position: pos,
     });
   }, []);

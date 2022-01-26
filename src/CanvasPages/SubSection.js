@@ -1,3 +1,4 @@
+import React from 'react';
 import { Group, Text } from 'react-konva';
 import Seat from './Seat';
 

@@ -12,6 +12,7 @@ function getColor(isBooked, isSelected) {
 }
 
 const Seat = (props) => {
+  console.log(props.data)
   const isBooked = props.data.status === 'booked';
 
   return (

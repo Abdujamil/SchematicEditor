@@ -21,7 +21,6 @@ export default memo(
   }) => {
     const containerRef = useRef();
 
-
     useEffect(() => {
       containerRef.current.cache();
     }, [section, selectedSeatsIds]);
