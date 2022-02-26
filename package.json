@@ -1,5 +1,5 @@
 {
-  "name": "electron-react-boilerplate",
+  "name": "Scheme",
   "productName": "ElectronReact",
   "description": "Electron application boilerplate based on React, React Router, Webpack, React Fast Refresh for rapid application development",
   "scripts": {
@@ -98,22 +98,10 @@
     "url": "git+https://github.com/electron-react-boilerplate/electron-react-boilerplate.git"
   },
   "author": {
-    "name": "Electron React Boilerplate Maintainers",
+    "name": "Electron React",
     "email": "electronreactboilerplate@gmail.com",
     "url": "https://electron-react-boilerplate.js.org"
   },
-  "contributors": [
-    {
-      "name": "Amila Welihinda",
-      "email": "amilajack@gmail.com",
-      "url": "https://github.com/amilajack"
-    },
-    {
-      "name": "John Tran",
-      "email": "jptran318@gmail.com",
-      "url": "https://github.com/jooohhn"
-    }
-  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues"
@@ -231,6 +219,7 @@
     "electron-debug": "^3.2.0",
     "electron-log": "^4.4.1",
     "electron-updater": "^4.3.9",
+    "formik": "^2.2.9",
     "history": "4.x.x",
     "konva": "^8.3.2",
     "node-fetch": "^3.2.0",
@@ -240,7 +229,8 @@
     "react-router-dom": "^6.2.1",
     "regenerator-runtime": "^0.13.9",
     "styled-components": "^5.3.3",
-    "use-http": "^1.0.26"
+    "use-http": "^1.0.26",
+    "yup": "^0.32.11"
   },
   "devEngines": {
     "node": ">=14.x",

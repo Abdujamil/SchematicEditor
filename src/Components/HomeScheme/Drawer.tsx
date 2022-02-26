@@ -18,8 +18,10 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { Link } from 'react-router-dom';
-import MainStage from '../../CanvasPages/MainStage';
+// import Form from './form';
+import './drawer.global.scss';
 // import ConvasStars from './ConvasStars';
+import HomeSeats from 'SilverSeats/homeSeats';
 
 const StyleHeaderText = {
   color: 'white',
@@ -142,7 +144,7 @@ export default function MiniDrawer() {
             </Link>
           </Typography>
           <Typography variant="h6" noWrap component="div">
-            <Link style={StyleHeaderText} to="/settings">
+            <Link style={StyleHeaderText} to="/">
               Settings
             </Link>
           </Typography>
@@ -172,15 +174,12 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-        <Typography paragraph>
+        <Typography>
           {/* <ConvasStars /> */}
-          <MainStage />
+          {/* <Form /> */}
+          <HomeSeats />
         </Typography>
       </Box>
     </Box>
   );
 }
-
-// export default function Drawerr() {
-//   return <h1>Drawer</h1>;
-// }

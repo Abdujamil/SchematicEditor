@@ -1,13 +1,11 @@
 import { Link } from 'react-router-dom';
-import { Route, Routes } from 'react-router';
-import Scheme from 'Components/HomeScheme/Scheme';
+// import { Route, Routes } from 'react-router';
 import './Home.global.scss';
-// import Header from 'Components/Header/header';
+// import Scheme from 'Components/HomeScheme/Scheme';
 
 export default function Home() {
   return (
     <div id="home">
-      {/* <Header /> */}
       <div className="buttons">
         <Link className="button" to="/scheme">
           Create new scheme
@@ -16,9 +14,6 @@ export default function Home() {
           Open scheme
         </Link>
       </div>
-      <Routes>
-        <Route path="/scheme" element={<Scheme />} />
-      </Routes>
     </div>
   );
 }
