@@ -16,7 +16,7 @@ const useFetch = (url) => {
 };
 
 const MainStage = ({ data }) => {
-  //const jsonData = useFetch("./seats-data.json");
+  const jsonData = useFetch("./seats-data.json");
   const containerRef = useRef(null);
   const stageRef = useRef(null);
 

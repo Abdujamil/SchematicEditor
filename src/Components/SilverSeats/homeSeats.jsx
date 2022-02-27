@@ -46,7 +46,6 @@ function HomeSeats() {
 
           for (let i = 1; i <= values.rows; i++) {
             initialData.seats.sections[0].subsections[0].seats_by_rows[i] = [];
-
             for (let j = 1; j <= values.seats; j++) {
               initialData.seats.sections[0].subsections[0].seats_by_rows[
                 i
