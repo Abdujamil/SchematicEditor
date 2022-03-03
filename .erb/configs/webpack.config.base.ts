@@ -7,8 +7,7 @@ import webpackPaths from './webpack.paths';
 import { dependencies as externals } from '../../release/app/package.json';
 
 export default {
-  externals: [...Object.keys(externals || {})],
-
+  externals:[...Object.keys(externals || {})],
   stats: 'errors-only',
 
   module: {
@@ -42,6 +41,7 @@ export default {
   plugins: [
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'production',
+      React: 'react',
     }),
   ],
 };

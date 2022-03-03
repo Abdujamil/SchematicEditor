@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from 'react';
+import React, { React, useState, useRef, useCallback, useEffect } from 'react';
 import { Stage, Layer } from './react-konva';
 import Section from './Section';
 import SeatPopup from './SeatPopup';
@@ -23,11 +23,11 @@ const MainStage = ({ data }) => {
   const [scale, setScale] = useState(1);
   const [scaleToFit, setScaleToFit] = useState(1);
   const [size, setSize] = useState({
-    width: 1000,
-    height: 1000,
-    virtualWidth: 1000,
+    width: 800,
+    height: 800,
+    virtualWidth: 500,
   });
-  const [virtualWidth, setVirtualWidth] = useState(1000);
+  const [virtualWidth, setVirtualWidth] = useState(500);
 
   const [selectedSeatsIds, setSelectedSeatsIds] = useState([]);
 
@@ -119,8 +119,8 @@ const MainStage = ({ data }) => {
       style={{
         position: 'relative',
         backgroundColor: 'lightgrey',
-        width: '100vw',
-        height: '100vh',
+        width: '50vw',
+        height: '50vh',
         padding: 10,
       }}
       ref={containerRef}

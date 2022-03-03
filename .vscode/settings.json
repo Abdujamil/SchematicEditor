@@ -2,8 +2,9 @@
   "files.associations": {
     ".eslintrc": "jsonc",
     ".prettierrc": "jsonc",
-    ".eslintignore": "ignore"
+    ".eslintignore": "ignore",
   },
+  "eslint.enable": false,
 
   "javascript.validate.enable": false,
   "javascript.format.enable": false,

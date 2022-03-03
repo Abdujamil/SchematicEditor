@@ -18,9 +18,9 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import { Link } from 'react-router-dom';
-import Form from './form';
+// import Form from './form';
 import './drawer.global.scss';
-// import HomeSeats from 'Components/SilverSeats/homeSeats';
+import HomeSeats from 'Components/SilverSeats/homeSeats';
 // import ConvasStars from './ConvasStars';
 
 const StyleHeaderText = {
@@ -176,8 +176,8 @@ export default function MiniDrawer() {
         <DrawerHeader />
         <Typography>
           {/* <ConvasStars /> */}
-          <Form />
-          {/* <HomeSeats /> */}
+          {/* <Form /> */}
+          <HomeSeats />
         </Typography>
       </Box>
     </Box>
