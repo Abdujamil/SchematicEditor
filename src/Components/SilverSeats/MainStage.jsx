@@ -23,8 +23,8 @@ const MainStage = ({ data }) => {
   const [scale, setScale] = useState(1);
   const [scaleToFit, setScaleToFit] = useState(1);
   const [size, setSize] = useState({
-    width: 800,
-    height: 800,
+    width: 500,
+    height: 500,
     virtualWidth: 500,
   });
   const [virtualWidth, setVirtualWidth] = useState(500);
@@ -114,19 +114,27 @@ const MainStage = ({ data }) => {
     downloadURI(uri, 'scheme.png');
   };
 
+  const saveAsJson = () => {
+    const json = stageRef.current.toJSON();
+    downloadURI(json, 'scheme.json');
+  };
+
   return (
     <div
       style={{
         position: 'relative',
         backgroundColor: 'lightgrey',
-        width: '50vw',
-        height: '50vh',
+        width: '500px',
+        height: '500px',
         padding: 10,
       }}
       ref={containerRef}
     >
-      <Button variant="contained" onClick={saveAsImage}>
+      <Button variant="contained" style={{marginRight: '10px'}} onClick={saveAsImage}>
         Save as image
+      </Button>
+      <Button variant="contained" onClick={saveAsJson}>
+        Save as Json
       </Button>
       <Stage
         ref={stageRef}

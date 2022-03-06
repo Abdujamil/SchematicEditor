@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { React, useRef, useEffect } from 'react';
 
 const isClickedInside = (e, element) => {
   let node = e.target;
@@ -14,7 +14,7 @@ const isClickedInside = (e, element) => {
 const Popup = ({ position, seatId, onClose }) => {
   const containerRef = useRef(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const onClick = (e) => {
       if (!isClickedInside(e, containerRef.current)) {
         onClose();
