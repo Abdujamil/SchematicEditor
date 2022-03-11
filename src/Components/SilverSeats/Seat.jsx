@@ -22,6 +22,7 @@ const Seat = (props) => {
       radius={SEAT_SIZE / 2}
       fill={getColor(isBooked, props.isSelected)}
       strokeWidth={1}
+      // draggable={true}
       onMouseEnter={(e) => {
         e.target._clearCache();
         props.onHover(props.data.name, e.target.getAbsolutePosition());

@@ -16,18 +16,18 @@ const useFetch = (url) => {
 };
 
 const MainStage = ({ data }) => {
-  const jsonData = useFetch("./seats-data.json");
+  const jsonData = useFetch('./seats-data.json');
   const containerRef = useRef(null);
   const stageRef = useRef(null);
 
   const [scale, setScale] = useState(1);
   const [scaleToFit, setScaleToFit] = useState(1);
   const [size, setSize] = useState({
-    width: 500,
-    height: 500,
-    virtualWidth: 500,
+    width: '100%',
+    height: '100%',
+    virtualWidth: '100%',
   });
-  const [virtualWidth, setVirtualWidth] = useState(500);
+  const [virtualWidth, setVirtualWidth] = useState(700);
 
   const [selectedSeatsIds, setSelectedSeatsIds] = useState([]);
 
@@ -107,16 +107,28 @@ const MainStage = ({ data }) => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  }
 
+  }
+  // save as svg
   const saveAsImage = () => {
     const uri = stageRef.current.toDataURL();
     downloadURI(uri, 'scheme.png');
   };
 
+  // save as Json
   const saveAsJson = () => {
-    const json = stageRef.current.toJSON();
-    downloadURI(json, 'scheme.json');
+    var canvasContents = stageRef.current.toJSON();
+
+    var file = new Blob([canvasContents], {
+      type: 'application/json',
+    });
+
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(file);
+    a.download = 'data.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   };
 
   return (
@@ -124,13 +136,17 @@ const MainStage = ({ data }) => {
       style={{
         position: 'relative',
         backgroundColor: 'lightgrey',
-        width: '500px',
+        width: '80%',
         height: '500px',
-        padding: 10,
+        padding: 0,
       }}
       ref={containerRef}
     >
-      <Button variant="contained" style={{marginRight: '10px'}} onClick={saveAsImage}>
+      <Button
+        variant="contained"
+        style={{ marginRight: '10px' }}
+        onClick={saveAsImage}
+      >
         Save as image
       </Button>
       <Button variant="contained" onClick={saveAsJson}>
